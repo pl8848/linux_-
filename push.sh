@@ -7,7 +7,7 @@ git checkout $n
 git add .
 read -p "请输入需要推送说明:" ps
 git commit -m  $ps 
-git remote add origi http://[ip]/root/sh_bat.git
+git remote add origin http://[ip]/root/sh_bat.git
 read -p "请输入需要同步的远程分支" origin_name
 git pull origin $origin_name
 git push origin $origin_name
