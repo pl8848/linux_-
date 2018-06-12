@@ -11,3 +11,6 @@ git remote add origin http://10.135.48.62/root/sh_bat.git
 read -p "请输入需要同步的远程分支" origin_name
 git pull origin $origin_name
 git push origin $origin_name
+if [ $?  ];then 
+	echo -e "\033[41;36m 成功完成\033[0m"
+	fi
