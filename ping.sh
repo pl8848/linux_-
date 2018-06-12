@@ -7,14 +7,12 @@ if [ ! $1 ];then
         echo -e  "\033[34m 如： \033[0m"
         echo -e  "\033[34m sh ./ping.sh 192.168.0. 2 253 \033[0m"
         exit
-
 fi
 for i in `seq $2 $3`
         do
         ping $1$i -c 1
         if [ "$?" = "$p" ];then
-        echo $i >> ip$date
+			echo $i >> ip$date
         fi
-
 done
 cat ip$date
