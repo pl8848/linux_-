@@ -1,0 +1,202 @@
+
+;================================================================
+;
+;  PRNKY004.INF
+;
+;  Kyocera Mini-Driver Installation Script
+;  Plug & Play Version
+;
+;  Copyright (c) 2000 KYOCERA CORPORATION
+;  Copyright (c) 2009 Revised KYOCERA MITA CORPORATION
+;  All Rights Reserved.
+;
+;  Kyocera PCL inbox drivers	01/27/2009
+;
+;================================================================
+
+;----------------------------------------------------------------
+; Version Section
+;----------------------------------------------------------------
+;
+[Version]
+Signature="$Windows NT$"
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+Provider="Kyocera"
+CatalogFile=PRNKY004.CAT
+DriverIsolation=2
+DriverVer=06/21/2006,6.1.7600.16385
+
+;
+; Manufacturer section.
+;
+[Manufacturer]
+"Kyocera"=Kyocera,NTx86
+
+;
+; Model sections.
+;
+; Each section here corresponds with an entry listed in the
+; [Manufacturer] section, above. The models will be displayed in the order
+; that they appear in the INF file.
+;
+
+
+[Kyocera.NTx86]
+"Kyocera CS-6030"      = KYKM6030.GPD,KyoceraCS-603049ED,Kyocera_CS-6030 ; Hardware ID
+"Kyocera CS-8030"      = KYKM8030.GPD,KyoceraCS-8030A1EF,Kyocera_CS-8030 ; Hardware ID
+"Kyocera FS-820"       = KYFS820.GPD,KyoceraFS-8209AF2,Kyocera_FS-820 ; Hardware ID
+"Kyocera FS-920"       = KYFS920.GPD,KyoceraFS-9205AA3,Kyocera_FS-920 ; Hardware ID
+"Kyocera FS-1030D"     = KYFS1030.GPD,KyoceraFS-1030D83FC,Kyocera_FS-1030D ; Hardware ID
+"Kyocera FS-C5100DN"   = KYFS5100.GPD,KyoceraFS-C5100DNDC59,Kyocera_FS-C5100DN ; Hardware ID
+"Kyocera FS-C5200DN"   = KYFS5200.GPD,KyoceraFS-C5200DNDC1D,Kyocera_FS-C5200DN ; Hardware ID
+"Kyocera FS-C5300DN"   = KYFS5300.GPD,KyoceraFS-C5300DN7C21,Kyocera_FS-C5300DN ; Hardware ID
+"Kyocera KM-6030"      = KYKM6030.GPD,KyoceraKM-6030EF67,Kyocera_KM-6030 ; Hardware ID
+"Kyocera KM-8030"      = KYKM8030.GPD,KyoceraKM-80300765,Kyocera_KM-8030 ; Hardware ID
+"Kyocera Mita CS-1650" = KYKM1650.GPD,KyoceraCS-16509C0F,Kyocera_Mita_CS-1650 ; Hardware ID
+"Kyocera Mita CS-2050" = KYKM2050.GPD,KyoceraCS-2050D9EF,Kyocera_Mita_CS-2050 ; Hardware ID
+"Kyocera Mita CS-2550" = KYKM2550.GPD,KyoceraCS-2550D8FF,Kyocera_Mita_CS-2550 ; Hardware ID
+"Kyocera Mita KM-1650" = KYKM1650.GPD,KyoceraKM-16503A87,Kyocera_Mita_KM-1650 ; Hardware ID
+"Kyocera Mita KM-2050" = KYKM2050.GPD,KyoceraKM-20507F65,Kyocera_Mita_KM-2050 ; Hardware ID
+"Kyocera Mita KM-2550" = KYKM2550.GPD,KyoceraKM-25507E75,Kyocera_Mita_KM-2550 ; Hardware ID
+
+[KYFS820.GPD]
+CopyFiles=@KYFS820.GPD,ResourceFiles
+DataFile=KYFS820.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYFS920.GPD]
+CopyFiles=@KYFS920.GPD,ResourceFiles
+DataFile=KYFS920.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYFS1030.GPD]
+CopyFiles=@KYFS1030.GPD,@KYUD1030.GDL,AutoconfigCommon,ResourceFiles
+DataFile=KYFS1030.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYKM6030.GPD]
+CopyFiles=@KYKM6030.GPD,@KYUD6030.GDL,AutoconfigCommon,ResourceFiles2
+DataFile=KYKM6030.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYKM8030.GPD]
+CopyFiles=@KYKM8030.GPD,@KYUD6030.GDL,AutoconfigCommon,ResourceFiles2
+DataFile=KYKM8030.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYKM1650.GPD]
+CopyFiles=@KYKM1650.GPD,ResourceFiles2
+DataFile=KYKM1650.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYKM2050.GPD]
+CopyFiles=@KYKM2050.GPD,ResourceFiles2
+DataFile=KYKM2050.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYKM2550.GPD]
+CopyFiles=@KYKM2550.GPD,ResourceFiles2
+DataFile=KYKM2550.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYFS5100.GPD]
+CopyFiles=@KYFS5100.GPD,@KYUD5100.GDL,AutoconfigCommon,ResourceFiles
+DataFile=KYFS5100.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYFS5200.GPD]
+CopyFiles=@KYFS5200.GPD,@KYUD5100.GDL,AutoconfigCommon,ResourceFiles
+DataFile=KYFS5200.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+[KYFS5300.GPD]
+CopyFiles=@KYFS5300.GPD,@KYUD5100.GDL,AutoconfigCommon,ResourceFiles
+DataFile=KYFS5300.GPD
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV_BIDI.OEM,UNIDRV_BIDI_DATA,TTFSUB.OEM"
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation) or if it's a color
+; profile (since the DestinationDirs can only handle sections, and not
+; individual files).
+;
+;
+;  Location of source files not in Layout.inf.
+;
+
+
+[ResourceFiles]
+kyw7sr02.dll
+kyw7fr03.dll
+
+[ResourceFiles2]
+kyw7sr02.dll
+KYW7FR02.DLL
+
+[AutoconfigCommon]
+KYW7AUT4.INI
+KYW7QUR4.XML
+
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+InboxVersionRequired=UseDriverVer
+
+
+[SourceDisksFiles]
+KYFS820.GPD   = 1
+KYFS920.GPD   = 1
+KYFS1030.GPD  = 1
+KYUD1030.GDL  = 1
+KYKM6030.GPD  = 1
+KYKM8030.GPD  = 1
+KYUD6030.GDL  = 1
+KYKM1650.GPD  = 1
+KYKM2050.GPD  = 1
+KYKM2550.GPD  = 1
+KYFS5100.GPD  = 1
+KYFS5200.GPD  = 1
+KYFS5300.GPD  = 1
+KYUD5100.GDL  = 1
+kyw7sr02.dll  = 1
+kyw7fr03.dll  = 1
+KYW7FR02.DLL  = 1
+
+KYW7QUR4.XML  = 1
+KYW7AUT4.INI  = 1
+
+
+;
+; Call SetupSetDirectoryId with 66000 to set the target directory at runtime
+; (depending on which environment drivers are getting installed)
+;
+
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+;
+; Localizable Strings
+;
+
+[Strings]
+;Non-Localizable
+
+;Localizable
+Disk1="Windows Installation Disc"
+
+[SourceDisksNames.x86]
+1   = %Disk1%,,,"I386"
+
+[SourceDisksNames.amd64]
+1   = %Disk1%,,,"Amd64"
+
+[SourceDisksNames.ia64]
+1   = %Disk1%,,,"Ia64"
+
+
