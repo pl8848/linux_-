@@ -9,7 +9,6 @@
 			exit
     fi
 #回到tmp
-	su root
     cd /tmp
 #clone汉化版本到/tmp
     git clone https://gitlab.com/xhang/gitlab.git
