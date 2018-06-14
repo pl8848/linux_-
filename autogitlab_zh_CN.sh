@@ -4,8 +4,8 @@
 
     if [ ! $1 ]
 		then 
-					echo  "\033[35m 请输入参数:run 来运行 \033[0m"
-							exit
+			echo  "\033[35m 请输入参数:run 来运行 \033[0m"
+			exit
     fi
 #回到tmp
     cd /tmp
