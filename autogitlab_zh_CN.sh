@@ -4,16 +4,18 @@
 
     if [ ! $1 ]
 		then 
-			echo  "\033[35m 请输入参数:run 来运行 \033[0m"
+			echo  "\033[35m 请脚本需要root用户或sudo权限来运行 \033[0m"
+			echo  "\033[35m 准备好后请在运行脚本时输入参数:run 来运行 \033[0m"
 			exit
     fi
 #回到tmp
+	su root
     cd /tmp
 #clone汉化版本到/tmp
     git clone https://gitlab.com/xhang/gitlab.git
     cd gitlab
-    sudo git fetch
-    sudo gitlab-ctl	stop
+    git fetch
+    gitlab-ctl	stop
 #把版本号存入到文件中，并把版本号中的”.“替换为”-“，为后面的汉化文件导入作准备
 #因为clone得到的版本文件是以”-“为文件名的。
 #【sed -i 's/\./\-/g' version】 
@@ -28,5 +30,6 @@
 	cd /opt/gitlab/embedded/service/gitlab-rails
 	git apply /tmp/${version}.diff
 	patch -d/opt/gitlab/embedded/service/gitlab-rails -p1 < ${version}.diff
-	sudo gitlab-ctl reconfigure
-	sudo gitlab-ctl start
+	gitlab-ctl reconfigure
+	gitlab-ctl start
+	
